@@ -1,0 +1,6 @@
+D:\Курсы\NET.S.2019.Zhidenko.2\NET.S.2019.Zhidenko.2\bin\Debug\NET.S.2019.Zhidenko.2.dll
+D:\Курсы\NET.S.2019.Zhidenko.2\NET.S.2019.Zhidenko.2\bin\Debug\NET.S.2019.Zhidenko.2.pdb
+D:\Курсы\NET.S.2019.Zhidenko.2\NET.S.2019.Zhidenko.2\obj\Debug\NET.S.2019.Zhidenko.2.csprojAssemblyReference.cache
+D:\Курсы\NET.S.2019.Zhidenko.2\NET.S.2019.Zhidenko.2\obj\Debug\NET.S.2019.Zhidenko.2.csproj.CoreCompileInputs.cache
+D:\Курсы\NET.S.2019.Zhidenko.2\NET.S.2019.Zhidenko.2\obj\Debug\NET.S.2019.Zhidenko.2.dll
+D:\Курсы\NET.S.2019.Zhidenko.2\NET.S.2019.Zhidenko.2\obj\Debug\NET.S.2019.Zhidenko.2.pdb

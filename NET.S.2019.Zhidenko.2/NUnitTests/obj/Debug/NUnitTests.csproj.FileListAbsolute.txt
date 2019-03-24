@@ -1,0 +1,16 @@
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\obj\Debug\NUnitTests.csprojAssemblyReference.cache
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\obj\Debug\NUnitTests.csproj.CoreCompileInputs.cache
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\NUnit3.TestAdapter.dll
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\NUnit3.TestAdapter.pdb
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\nunit.engine.dll
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\nunit.engine.api.dll
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\NUnitTests.dll
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\NUnitTests.pdb
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\NET.S.2019.Zhidenko.2.dll
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\nunit.framework.dll
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\NET.S.2019.Zhidenko.2.pdb
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\nunit.framework.pdb
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\bin\Debug\nunit.framework.xml
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\obj\Debug\NUnitTests.csproj.CopyComplete
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\obj\Debug\NUnitTests.dll
+D:\Курсы\NET.S.2019.Zhidenko.2\NUnitTests\obj\Debug\NUnitTests.pdb
