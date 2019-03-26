@@ -8,7 +8,7 @@ namespace BitsInsertMSUnitTest
     public class InsertTests
     {
         [TestMethod]
-        public void Method_withNumbers_8and15_withIndexes_3and8_returns_120()
+        public void InsertNumber_withNumbers_8and15_withIndexes_3and8_returns_120()
         {
             //Arrange
             int firstNumber = 8;
@@ -26,7 +26,7 @@ namespace BitsInsertMSUnitTest
         }
 
         [TestMethod]
-        public void Method_withNumbers_15and15_withIndexes_0and0_returns_15()
+        public void InsertNumber_withNumbers_15and15_withIndexes_0and0_returns_15()
         {
             //Arrange
             int firstNumber = 15;
@@ -44,7 +44,7 @@ namespace BitsInsertMSUnitTest
         }
 
         [TestMethod]
-        public void Method_withNumbers_8and15_withIndexes_0and0_returns_9()
+        public void InsertNumber_withNumbers_8and15_withIndexes_0and0_returns_9()
         {
             //Arrange
             int firstNumber = 8;
@@ -62,7 +62,7 @@ namespace BitsInsertMSUnitTest
         }
 
         [TestMethod]
-        public void Method_withIndexes_4and3_returns_ArgumentException()
+        public void InsertNumber_withIndexes_4and3_returns_ArgumentException()
         {
             //Arrange
             int firstNumber = 8;
@@ -75,7 +75,7 @@ namespace BitsInsertMSUnitTest
         }
 
         [TestMethod]
-        public void Method_withNegativeNumbers_returns_ArgumentException()
+        public void InsertNumber_withNegativeNumbers_returns_ArgumentException()
         {
             //Arrange
             int firstNumber = -8;

@@ -9,7 +9,7 @@ namespace NUnitTests
     public class FilterTests
     {
         [Test]
-        public void Method_with_list_7_1_2_3_17_70_5_minus7_and_digit_7_returns_7_17_70_minus7()
+        public void FilterDigits_with_list_7_1_2_3_17_70_5_minus7_and_digit_7_returns_7_17_70_minus7()
         {
             //Arrange
             List<int> initialList = new List<int>();
@@ -28,7 +28,7 @@ namespace NUnitTests
         }
 
         [Test]
-        public void Method_with_null_list_returns_ArgumentNullException()
+        public void FilterDigits_with_null_list_returns_ArgumentNullException()
         {
             //Arrange
             List<int> initialList = null;
@@ -39,7 +39,7 @@ namespace NUnitTests
         }
 
         [Test]
-        public void Method_with_empty_list_returns_ArgumentException()
+        public void FilterDigits_with_empty_list_returns_ArgumentException()
         {
             //Arrange
             List<int> initialList = new List<int>();
@@ -50,7 +50,7 @@ namespace NUnitTests
         }
 
         [Test]
-        public void Method_with_invalid_digit_returns_ArgumentException()
+        public void FilterDigits_with_invalid_digit_returns_ArgumentException()
         {
             //Arrange
             List<int> initialList = new List<int>();

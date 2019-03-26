@@ -24,7 +24,7 @@ namespace NET.S._2019.Zhidenko._2
                 throw new ArgumentOutOfRangeException();
 
             double x = number;
-            double prevX = x + 1;
+            double prevX = double.MaxValue;
 
             while (Math.Abs(x - prevX) > epsilon)
             {

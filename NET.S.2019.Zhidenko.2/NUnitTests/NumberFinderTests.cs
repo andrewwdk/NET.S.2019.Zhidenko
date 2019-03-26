@@ -16,13 +16,13 @@ namespace NUnitTests
         [TestCase(3456432, ExpectedResult = 3462345)]
         [TestCase(10, ExpectedResult = null)]
         [TestCase(20, ExpectedResult = null)]
-        public int? Method_with_valid_data(int number)
+        public int? FindNextBiggerNumber_with_valid_data(int number)
         {
             return NumberFinder.FindNextBiggerNumber(number);
         }
 
         [TestCase(-10)]
-        public void Method_with_negative_number_returns_ArgumentExeption(int number)
+        public void FindNextBiggerNumber_with_negative_number_returns_ArgumentExeption(int number)
         {
             Assert.Throws<ArgumentException>(() => NumberFinder.FindNextBiggerNumber(number));
         }
@@ -37,7 +37,7 @@ namespace NUnitTests
         [TestCase(3456432, 3462345)]
         [TestCase(10, null)]
         [TestCase(20, null)]
-        public void Method_StopWatch_with_valid_data(int number, int? expected)
+        public void FindNextBiggerNumberAndGetTimeByStopWatch_with_valid_data(int number, int? expected)
         {
             long time;
             int? result = NumberFinder.FindNextBiggerNumberAndGetTimeByStopWatch(number, out time);
@@ -56,7 +56,7 @@ namespace NUnitTests
         [TestCase(3456432, 3462345)]
         [TestCase(10, null)]
         [TestCase(20, null)]
-        public void Method_Timer_with_valid_data(int number, int? expected)
+        public void FindNextBiggerNumberAndGetTimeByTimer_with_valid_data(int number, int? expected)
         {
             long time;
             int? result = NumberFinder.FindNextBiggerNumberAndGetTimeByTimer(number, out time);

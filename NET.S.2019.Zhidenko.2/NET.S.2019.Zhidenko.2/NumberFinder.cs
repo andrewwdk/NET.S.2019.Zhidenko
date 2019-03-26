@@ -99,7 +99,7 @@ namespace NET.S._2019.Zhidenko._2
             if (index == 0)
                 return null;
             
-            //find the smallest digit from right side of the digit which will be swap(index - 1)
+            //find the smallest digit from right side of the digit which will be swaped(index - 1)
             int smallestDigitIndex = index;
             for (int j = index + 1; j < listOfDigits.Count; j++)
             {
