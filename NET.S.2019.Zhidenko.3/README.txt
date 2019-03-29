@@ -1,0 +1,1 @@
+1) Implement methods which calculate gcd by Euclidean and Stein's algorythms. Add to each method possibility to show time of execution. Create Unit tests for all methods.
