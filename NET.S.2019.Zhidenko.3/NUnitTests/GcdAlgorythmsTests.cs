@@ -24,6 +24,20 @@ namespace NUnitTests
             return GcdAlgorythms.EuclideanGcd(numbers);
         }
 
+        [Test]
+        public void EuclideanGcdGcd_WithNull()
+        {
+            Assert.Throws<ArgumentNullException>(() => { GcdAlgorythms.EuclideanGcd(null); });
+        }
+
+        [TestCase(new int[] { })]
+        [TestCase(new int[] { 8 })]
+        [TestCase(1)]
+        public void EuclideanGcd_WithIncorrectCountOfElementsInArray(params int[] numbers)
+        {
+            Assert.Throws<ArgumentException>(() => { GcdAlgorythms.EuclideanGcd(numbers); });
+        }
+
         [TestCase(0, 0, ExpectedResult = 0)]
         [TestCase(0, 0, 0, 0, ExpectedResult = 0)]
         [TestCase(1, 10, ExpectedResult = 1)]
@@ -39,6 +53,20 @@ namespace NUnitTests
         public int SteinGcd_with_correct_data(params int[] numbers)
         {
             return GcdAlgorythms.SteinGcd(numbers);
+        }
+
+        [Test]
+        public void SteinGcd_WithNull()
+        {
+            Assert.Throws<ArgumentNullException>(() => { GcdAlgorythms.SteinGcd(null); });
+        }
+
+        [TestCase(new int[] { })]
+        [TestCase(new int[] { 8 })]
+        [TestCase(1)]
+        public void SteinGcd_WithIncorrectCountOfElementsInArray(params int[] numbers)
+        {
+            Assert.Throws<ArgumentException>(() => { GcdAlgorythms.SteinGcd(numbers); });
         }
     }
 }

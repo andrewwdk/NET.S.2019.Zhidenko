@@ -1,1 +1,2 @@
 1) Implement methods which calculate gcd by Euclidean and Stein's algorythms. Add to each method possibility to show time of execution. Create Unit tests for all methods.
+2) Implement extended method which convert double number to a string of bits in IEEE 754 format. Create Unit tests.
