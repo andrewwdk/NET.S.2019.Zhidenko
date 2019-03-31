@@ -1,0 +1,1 @@
+1) Create unmutable class Polynomial which implements all logic of mathematical polynom. Override virtual methods of Object. Overload "==", "!=", "+", "-", "*" operators. Create Unit tests.

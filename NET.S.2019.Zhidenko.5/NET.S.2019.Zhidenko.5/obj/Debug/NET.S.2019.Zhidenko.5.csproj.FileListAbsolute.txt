@@ -1,0 +1,6 @@
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NET.S.2019.Zhidenko.5\bin\Debug\NET.S.2019.Zhidenko.5.dll
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NET.S.2019.Zhidenko.5\bin\Debug\NET.S.2019.Zhidenko.5.pdb
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NET.S.2019.Zhidenko.5\obj\Debug\NET.S.2019.Zhidenko.5.csprojAssemblyReference.cache
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NET.S.2019.Zhidenko.5\obj\Debug\NET.S.2019.Zhidenko.5.csproj.CoreCompileInputs.cache
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NET.S.2019.Zhidenko.5\obj\Debug\NET.S.2019.Zhidenko.5.dll
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NET.S.2019.Zhidenko.5\obj\Debug\NET.S.2019.Zhidenko.5.pdb

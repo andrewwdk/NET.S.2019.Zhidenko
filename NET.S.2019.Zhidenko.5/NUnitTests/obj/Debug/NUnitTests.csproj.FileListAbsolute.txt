@@ -1,0 +1,16 @@
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\NUnit3.TestAdapter.dll
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\NUnit3.TestAdapter.pdb
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\nunit.engine.dll
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\nunit.engine.api.dll
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\NUnitTests.dll
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\NUnitTests.pdb
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\NET.S.2019.Zhidenko.5.dll
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\nunit.framework.dll
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\NET.S.2019.Zhidenko.5.pdb
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\nunit.framework.pdb
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\bin\Debug\nunit.framework.xml
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\obj\Debug\NUnitTests.csprojAssemblyReference.cache
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\obj\Debug\NUnitTests.csproj.CoreCompileInputs.cache
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\obj\Debug\NUnitTests.csproj.CopyComplete
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\obj\Debug\NUnitTests.dll
+D:\github_repos\NET.S.2019.Zhidenko\NET.S.2019.Zhidenko.5\NUnitTests\obj\Debug\NUnitTests.pdb
