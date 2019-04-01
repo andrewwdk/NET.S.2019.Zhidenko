@@ -1,1 +1,2 @@
 1) Create unmutable class Polynomial which implements all logic of mathematical polynom. Override virtual methods of Object. Overload "==", "!=", "+", "-", "*" operators. Create Unit tests.
+2) Implement algorythm of Bubble sort for jagged array which allows to sort arrays by sum, max element and min element. Create Unit tests.
