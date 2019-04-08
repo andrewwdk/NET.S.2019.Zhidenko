@@ -149,6 +149,8 @@ namespace NET.S._2019.Zhidenko._8
             }
         }
 
+        /// <summary> Convert Book to string.</summary>
+        /// <returns>String representation.</returns>
         public override string ToString()
         {
             return "Isbn: " + Isbn + ", Name: " + Name + ", Author: " + Author + ", Publisher: " +
@@ -156,6 +158,8 @@ namespace NET.S._2019.Zhidenko._8
                 PageCount.ToString() + ", Price: " + Price.ToString();
         }
 
+        /// <summary> Calculate hash code.</summary>
+        /// <returns>Hash code.</returns>
         public override int GetHashCode()
         {
             var hashCode = 352033288;
@@ -171,11 +175,17 @@ namespace NET.S._2019.Zhidenko._8
             return hashCode;
         }
 
+        /// <summary> Compare Book with other book.</summary>
+        /// <param name="obj"> Object to compare. </param>
+        /// <returns>Comparison result.</returns>
         public override bool Equals(object obj)
         {
             return Equals(obj as Book);
         }
 
+        /// <summary> Compare Book with other book.</summary>
+        /// <param name="book"> Book to compare. </param>
+        /// <returns>Comparison result.</returns>
         public bool Equals(Book book)
         {
             if (book == null)
@@ -194,6 +204,9 @@ namespace NET.S._2019.Zhidenko._8
             }
         }
 
+        /// <summary> Compare Book with other book.</summary>
+        /// <param name="book"> Book to compare. </param>
+        /// <returns>Comparison result.</returns
         public int CompareTo(Book book)
         {
             if(book == null)
@@ -211,6 +224,9 @@ namespace NET.S._2019.Zhidenko._8
             }
         }
 
+        /// <summary> Compare Book with other book.</summary>
+        /// <param name="obj"> Object to compare. </param>
+        /// <returns>Comparison result.</returns
         public int CompareTo(object obj)
         {
             return CompareTo(obj as Book);
