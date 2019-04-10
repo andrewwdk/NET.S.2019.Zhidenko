@@ -60,6 +60,14 @@ namespace NET.S._2019.Zhidenko._8
             storage.PutBooksIntoStorage(BookList);
         }
 
+        /// <summary> Sorts list of book by chosen tag.</summary>
+        /// <param name="tag"> Tag to sort by. </param>
+        /// <returns> Sorted list of book by tag.</returns>
+        public List<Book> SortBooksByTag(Sorts.ISortable tag)
+        {
+            return tag.SortBooksByTag(BookList).ToList();
+        }
+
         /// <summary> Check if the list contains the book.</summary>
         /// <param name="book"> The book to check. </param>
         /// <returns> Existance check result.</returns>
