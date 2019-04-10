@@ -206,7 +206,7 @@ namespace NET.S._2019.Zhidenko._8
 
         /// <summary> Compare Book with other book.</summary>
         /// <param name="book"> Book to compare. </param>
-        /// <returns>Comparison result.</returns
+        /// <returns>Comparison result.</returns>
         public int CompareTo(Book book)
         {
             if(book == null)
@@ -226,7 +226,7 @@ namespace NET.S._2019.Zhidenko._8
 
         /// <summary> Compare Book with other book.</summary>
         /// <param name="obj"> Object to compare. </param>
-        /// <returns>Comparison result.</returns
+        /// <returns>Comparison result.</returns>
         public int CompareTo(object obj)
         {
             return CompareTo(obj as Book);
