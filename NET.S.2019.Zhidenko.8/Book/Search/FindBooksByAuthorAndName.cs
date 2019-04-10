@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NET.S._2019.Zhidenko._8.Search
 {
-    public class FindBooksByAuthorAndName
+    public class FindBooksByAuthorAndName : ISearchable
     {
         public string Name { get; private set; }
         public string Author { get; private set; }

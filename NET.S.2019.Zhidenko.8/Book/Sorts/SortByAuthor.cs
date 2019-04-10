@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NET.S._2019.Zhidenko._8.Sorts
 {
-    public class SortByAuthor
+    public class SortByAuthor : ISortable
     {
         /// <summary> Sort list of books by author.</summary>
         /// <param name="list"> List of books. </param>
