@@ -4,7 +4,7 @@ using System.IO;
 
 namespace NET.S._2019.Zhidenko._8
 {
-    class BookListStorage
+    public class BookListStorage: IStoragable
     {
         private string storagePath;
 
@@ -51,7 +51,7 @@ namespace NET.S._2019.Zhidenko._8
         }
 
         /// <summary> Read list of books from file.</summary>
-        /// <returns>List of books.</returns
+        /// <returns>List of books.</returns>
         public List<Book> GetBooksFromStorage()
         {
             List<Book> list = new List<Book>();

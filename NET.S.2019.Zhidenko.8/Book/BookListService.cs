@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NET.S._2019.Zhidenko._8
 {
-    class BookListService
+    public class BookListService
     {
         private IStoragable storage;
         public List<Book> BookList { get; private set; }
@@ -17,7 +17,7 @@ namespace NET.S._2019.Zhidenko._8
             BookList = storage.GetBooksFromStorage();
         }
 
-        IStoragable Storage
+        public IStoragable Storage
         {
             get
             {
