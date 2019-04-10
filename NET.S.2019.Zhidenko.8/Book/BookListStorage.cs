@@ -20,7 +20,7 @@ namespace NET.S._2019.Zhidenko._8
                 return storagePath;
             }
 
-            set
+            private set
             {
                 if(value == null || value == string.Empty)
                 {
