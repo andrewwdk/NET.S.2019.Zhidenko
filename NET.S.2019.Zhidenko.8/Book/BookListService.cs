@@ -68,6 +68,14 @@ namespace NET.S._2019.Zhidenko._8
             return tag.SortBooksByTag(BookList).ToList();
         }
 
+        /// <summary> Finds books in the list by chosen tag.</summary>
+        /// <param name="tag"> Tag to find by. </param>
+        /// <returns> List of found books by tag.</returns>
+        public List<Book> FindBooksByTag(Search.ISearchable tag)
+        {
+            return tag.FindBooksByTag(BookList);
+        }
+
         /// <summary> Check if the list contains the book.</summary>
         /// <param name="book"> The book to check. </param>
         /// <returns> Existance check result.</returns>
