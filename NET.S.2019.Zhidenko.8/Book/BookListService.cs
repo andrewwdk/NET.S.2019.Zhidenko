@@ -65,6 +65,11 @@ namespace NET.S._2019.Zhidenko._8
         /// <returns> Sorted list of book by tag.</returns>
         public List<Book> SortBooksByTag(Sorts.ISortable tag)
         {
+            if(tag == null)
+            {
+                throw new ArgumentNullException("Tag can't be null!");
+            }
+
             return tag.SortBooksByTag(BookList).ToList();
         }
 
@@ -73,6 +78,11 @@ namespace NET.S._2019.Zhidenko._8
         /// <returns> List of found books by tag.</returns>
         public List<Book> FindBooksByTag(Search.ISearchable tag)
         {
+            if (tag == null)
+            {
+                throw new ArgumentNullException("Tag can't be null!");
+            }
+
             return tag.FindBooksByTag(BookList);
         }
 
