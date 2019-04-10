@@ -54,6 +54,12 @@ namespace NET.S._2019.Zhidenko._8
             BookList.Remove(book);
         }
 
+        /// <summary> Save list of books in storage.</summary>
+        public void PutBooksIntoStorage()
+        {
+            storage.PutBooksIntoStorage(BookList);
+        }
+
         /// <summary> Check if the list contains the book.</summary>
         /// <param name="book"> The book to check. </param>
         /// <returns> Existance check result.</returns>
