@@ -7,6 +7,7 @@ using BankAccounts.AccountTypes;
 
 namespace BankAccounts.BonusTypes
 {
+    [Serializable]
     public class BasicBonus : IBonus
     {
         public int AddMoney(AccountType accountType, decimal allMoney, decimal addedMoney)

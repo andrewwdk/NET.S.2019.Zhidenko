@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankAccounts.AccountTypes
 {
+    [Serializable]
     public class GoldType : AccountType
     {
         public GoldType()

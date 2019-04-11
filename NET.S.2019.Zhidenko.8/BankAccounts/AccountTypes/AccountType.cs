@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankAccounts.AccountTypes
 {
+    [Serializable]
     public abstract class AccountType
     {
         public int BalanceCost { get; protected set; }

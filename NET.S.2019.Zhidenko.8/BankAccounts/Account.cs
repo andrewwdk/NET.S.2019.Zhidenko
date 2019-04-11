@@ -8,6 +8,7 @@ using BankAccounts.BonusTypes;
 
 namespace BankAccounts
 {
+    [Serializable]
     public class Account
     {
         private int number;
@@ -30,6 +31,8 @@ namespace BankAccounts
             Storage = storage;
             AccountType = accountType;
             BonusLogic = bonusLogic;
+
+            storage.Save(this);
         }
 
         public int Number
@@ -120,6 +123,18 @@ namespace BankAccounts
             }
         }
 
+        public int BonusPoints
+        {
+            get
+            {
+                return bonusPoints;
+            }
+
+            private set
+            {
+            }
+        }
+
         public IBonus BonusLogic { get; set; }
 
         /// <summary> Add money to account. </summary>
@@ -134,7 +149,7 @@ namespace BankAccounts
             Money += addedMoney;
             bonusPoints += BonusLogic.AddMoney(AccountType, Money, addedMoney);
 
-            storage.Save();
+            storage.Save(this);
         }
 
         /// <summary> Withdraw money from account. </summary>
@@ -149,7 +164,7 @@ namespace BankAccounts
             Money -= withdrewMoney;
             bonusPoints += BonusLogic.WithdrawMoney(AccountType, Money, withdrewMoney);
 
-            storage.Save();
+            storage.Save(this);
         }
 
         /// <summary> Create new account of current owner. </summary>
