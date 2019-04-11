@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BankAccounts.AccountTypes
 {
-    class BaseType : AccountType
+    public class BaseType : AccountType
     {
         public BaseType()
         {
-            balanceCost = 1;
-            addMoneyCost = 1;
+            this.BalanceCost = 1;
+            this.AddMoneyCost = 1;
         }
     }
 }

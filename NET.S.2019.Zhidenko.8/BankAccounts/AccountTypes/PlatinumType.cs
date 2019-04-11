@@ -10,8 +10,8 @@ namespace BankAccounts.AccountTypes
     {
         public PlatinumType()
         {
-            balanceCost = 5;
-            addMoneyCost = 5;
+            this.BalanceCost = 5;
+            this.AddMoneyCost = 5;
         }
     }
 }

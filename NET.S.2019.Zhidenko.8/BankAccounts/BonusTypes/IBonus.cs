@@ -10,6 +10,7 @@ namespace BankAccounts.BonusTypes
     public interface IBonus
     {
         int AddMoney(AccountType accountType, decimal allMoney, decimal addedMoney);
-        int WithdrawMoney(AccountType accountType, decimal AllMoney, decimal withdrewMoney);
+
+        int WithdrawMoney(AccountType accountType, decimal allMoney, decimal withdrewMoney);
     }
 }

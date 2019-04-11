@@ -10,8 +10,8 @@ namespace BankAccounts.AccountTypes
     {
         public GoldType()
         {
-            balanceCost = 2;
-            addMoneyCost = 2;
+            this.BalanceCost = 2;
+            this.AddMoneyCost = 2;
         }
     }
 }

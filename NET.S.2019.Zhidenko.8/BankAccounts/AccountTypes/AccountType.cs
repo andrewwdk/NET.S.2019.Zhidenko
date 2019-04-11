@@ -8,26 +8,8 @@ namespace BankAccounts.AccountTypes
 {
     public abstract class AccountType
     {
-        //public abstract int BalanceCost { get; }
-        //public abstract int AddMoneyCost { get; }
+        public int BalanceCost { get; protected set; }
 
-        protected int balanceCost;
-        protected int addMoneyCost;
-
-        public int BalanceCost
-        {
-            get
-            {
-                return balanceCost;
-            }
-        }
-
-        public int AddMoneyCost
-        {
-            get
-            {
-                return addMoneyCost;
-            }
-        }
+        public int AddMoneyCost { get; protected set; }
     }
 }

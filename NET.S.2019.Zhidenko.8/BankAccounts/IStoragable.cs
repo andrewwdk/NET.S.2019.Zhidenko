@@ -9,6 +9,7 @@ namespace BankAccounts
     public interface IStoragable
     {
         void Save();
+
         Account Get();
     }
 }
