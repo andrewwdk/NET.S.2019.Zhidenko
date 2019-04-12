@@ -23,7 +23,7 @@
 	- Close account;
    f) Store account data in binary file.
    g) Show work of classes in console application.
-   Remember about of possibility:
+   Remember about possibility:
 	- to add new types of accounts;
 	- to change/add source of storaging account data;
 	- to change logic of calculating bonus points.
