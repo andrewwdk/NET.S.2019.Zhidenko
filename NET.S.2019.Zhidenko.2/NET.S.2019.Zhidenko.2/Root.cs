@@ -18,10 +18,14 @@ namespace NET.S._2019.Zhidenko._2
         public static double FindNthRoot(double number, int root, double epsilon)
         {
             if (root < 1)
+            {
                 throw new ArgumentOutOfRangeException();
+            }
 
             if (epsilon <= 0)
+            {
                 throw new ArgumentOutOfRangeException();
+            }
 
             double x = number;
             double prevX = double.MaxValue;
@@ -30,11 +34,10 @@ namespace NET.S._2019.Zhidenko._2
             {
                 prevX = x;
                 x = (1 / (double)root) * (((root - 1) * prevX) + (number / Math.Pow(prevX, root - 1)));
-
             }
 
             int round = 0;
-            while(epsilon < 1)
+            while (epsilon < 1)
             {
                 epsilon *= 10;
                 round++;

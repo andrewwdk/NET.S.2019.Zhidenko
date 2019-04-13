@@ -16,10 +16,14 @@ namespace NET.S._2019.Zhidenko._2
         public static int InsertNumber(int firstNumber, int secondNumber, int i, int j)
         {
             if (firstNumber < 0 || secondNumber < 0)
+            {
                 throw new ArgumentException();
+            }
 
             if (i < 0 || j < 0 || i > j || i > 31 || j > 31)
+            {
                 throw new ArgumentException();
+            }
 
             BitArray firstNumberBits = new BitArray(BitConverter.GetBytes(firstNumber));
             BitArray secondNumberBits = new BitArray(BitConverter.GetBytes(secondNumber));

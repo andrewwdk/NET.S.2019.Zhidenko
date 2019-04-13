@@ -17,19 +17,29 @@ namespace NET.S._2019.Zhidenko._2
         public static List<int> FilterDigits(List<int> list, int digit)
         {
             if (list == null)
+            {
                 throw new ArgumentNullException();
+            }
 
             if (list.Count == 0)
+            {
                 throw new ArgumentException();
+            }
 
             if (digit < 0 || digit > 9)
+            {
                 throw new ArgumentException();
+            }
 
             List<int> filteredList = new List<int>();
 
             foreach (int number in list)
+            {
                 if (number.ToString().Contains(digit.ToString()))
+                {
                     filteredList.Add(number);
+                }
+            }
 
             return filteredList;
         }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Timers;
-using System.Threading;
 
 namespace NET.S._2019.Zhidenko._2
 {
@@ -48,16 +47,6 @@ namespace NET.S._2019.Zhidenko._2
         }
 
         /// <summary>
-        /// Increment time
-        /// </summary>
-        /// <param name="sender">Sender</param>
-        /// <param name="e">Event</param>
-        private static void TimerProc(object sender, ElapsedEventArgs e)
-        {
-            Time++;
-        }
-
-        /// <summary>
         /// Find next bigger number
         /// </summary>
         /// <param name="number">Number</param>
@@ -70,10 +59,14 @@ namespace NET.S._2019.Zhidenko._2
             }
 
             if (number <= 9)
+            {
                 return null;
+            }
 
             if (number == int.MaxValue)
+            {
                 return null;
+            }
 
             int num = number, index = 0;
             List<int> listOfDigits = new List<int>();
@@ -86,7 +79,7 @@ namespace NET.S._2019.Zhidenko._2
 
             listOfDigits.Reverse();
 
-            //find 1st digit from the end that bigger than the next
+            // find 1st digit from the end that bigger than the next
             for (int i = listOfDigits.Count - 1; i > 0; i--)
             {
                 if (listOfDigits[i] > listOfDigits[i - 1])
@@ -97,26 +90,44 @@ namespace NET.S._2019.Zhidenko._2
             }
 
             if (index == 0)
+            {
                 return null;
-            
-            //find the smallest digit from right side of the digit which will be swaped(index - 1)
+            }
+
+            // find the smallest digit from right side of the digit which will be swaped(index - 1)
             int smallestDigitIndex = index;
             for (int j = index + 1; j < listOfDigits.Count; j++)
             {
                 if (listOfDigits[j] < listOfDigits[smallestDigitIndex] && listOfDigits[j] > listOfDigits[index - 1])
+                {
                     smallestDigitIndex = j;
+                }
             }
 
             Swap(listOfDigits, index - 1, smallestDigitIndex);
 
             for (int i = index; i < listOfDigits.Count; i++)
+            {
                 for (int j = i + 1; j < listOfDigits.Count; j++)
                 {
                     if (listOfDigits[i] > listOfDigits[j])
+                    {
                         Swap(listOfDigits, i, j);
+                    }
                 }
+            }
 
             return GetFinalNumber(listOfDigits);
+        }
+
+        /// <summary>
+        /// Increment time
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">Event</param>
+        private static void TimerProc(object sender, ElapsedEventArgs e)
+        {
+            Time++;
         }
 
         /// <summary>
