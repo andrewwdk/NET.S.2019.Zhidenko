@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace NET.S._2019.Zhidenko._8.Search
 {
-    public class FindBooksByAuthor: ISearchable
+    public class FindBooksByAuthor : ISearchable
     {
-        public string Author { get; private set; }
-
         public FindBooksByAuthor(string author)
         {
             Author = author;
         }
+
+        public string Author { get; private set; }
 
         /// <summary> Finds book by author.</summary>
         /// <param name="initialList"> List to find in. </param>

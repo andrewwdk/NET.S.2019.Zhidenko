@@ -9,13 +9,14 @@ namespace NET.S._2019.Zhidenko._8
     public class BookListService
     {
         private IStoragable storage;
-        public List<Book> BookList { get; private set; }
 
         public BookListService(IStoragable storage)
         {
             Storage = storage;
             BookList = storage.GetBooksFromStorage();
         }
+
+        public List<Book> BookList { get; private set; }
 
         public IStoragable Storage
         {
@@ -65,7 +66,7 @@ namespace NET.S._2019.Zhidenko._8
         /// <returns> Sorted list of book by tag.</returns>
         public List<Book> SortBooksByTag(Sorts.ISortable tag)
         {
-            if(tag == null)
+            if (tag == null)
             {
                 throw new ArgumentNullException("Tag can't be null!");
             }
@@ -88,15 +89,15 @@ namespace NET.S._2019.Zhidenko._8
 
         /// <summary> Check if the list contains the book.</summary>
         /// <param name="book"> The book to check. </param>
-        /// <returns> Existance check result.</returns>
+        /// <returns> Existence check result.</returns>
         private bool IfBookExists(Book book)
         {
-            if(book == null)
+            if (book == null)
             {
                 return false;
             }
 
-            foreach(Book currentBook in BookList)
+            foreach (Book currentBook in BookList)
             {
                 if (currentBook.Equals(book))
                 {

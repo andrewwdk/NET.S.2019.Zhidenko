@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace NET.S._2019.Zhidenko._8.Search
 {
-    public class FindBooksByName: ISearchable
+    public class FindBooksByName : ISearchable
     {
-        public string Name { get; private set; }
-
         public FindBooksByName(string name)
         {
             Name = name;
         }
+
+        public string Name { get; private set; }
 
         /// <summary> Finds book by name.</summary>
         /// <param name="initialList"> List to find in. </param>
@@ -22,9 +22,9 @@ namespace NET.S._2019.Zhidenko._8.Search
         {
             List<Book> resultList = new List<Book>();
 
-            foreach(Book book in initialList)
+            foreach (Book book in initialList)
             {
-                if(book.Name == Name)
+                if (book.Name == Name)
                 {
                     resultList.Add(book);
                 }

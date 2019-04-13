@@ -8,14 +8,15 @@ namespace NET.S._2019.Zhidenko._8.Search
 {
     public class FindBooksByAuthorAndName : ISearchable
     {
-        public string Name { get; private set; }
-        public string Author { get; private set; }
-
         public FindBooksByAuthorAndName(string name, string author)
         {
             Name = name;
             Author = author;
         }
+
+        public string Name { get; private set; }
+
+        public string Author { get; private set; }
 
         /// <summary> Finds book by name and author.</summary>
         /// <param name="initialList"> List to find in. </param>

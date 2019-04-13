@@ -4,7 +4,7 @@ using System.IO;
 
 namespace NET.S._2019.Zhidenko._8
 {
-    public class BookListStorage: IStoragable
+    public class BookListStorage : IStoragable
     {
         private string storagePath;
 
@@ -22,7 +22,7 @@ namespace NET.S._2019.Zhidenko._8
 
             private set
             {
-                if(value == null || value == string.Empty)
+                if (value == null || value == string.Empty)
                 {
                     throw new ArgumentException("Path to book storage can't be empty string or null");
                 }
@@ -37,7 +37,7 @@ namespace NET.S._2019.Zhidenko._8
         {
             using (BinaryWriter writer = new BinaryWriter(File.Open(storagePath, FileMode.Create)))
             {
-                foreach(Book book in list)
+                foreach (Book book in list)
                 {
                     writer.Write(book.Isbn);
                     writer.Write(book.Name);
@@ -56,9 +56,9 @@ namespace NET.S._2019.Zhidenko._8
         {
             List<Book> list = new List<Book>();
 
-            using(BinaryReader reader = new BinaryReader(File.Open(storagePath, FileMode.OpenOrCreate)))
+            using (BinaryReader reader = new BinaryReader(File.Open(storagePath, FileMode.OpenOrCreate)))
             {
-                while(reader.BaseStream.Position != reader.BaseStream.Length)
+                while (reader.BaseStream.Position != reader.BaseStream.Length)
                 {
                     var isbn = reader.ReadString();
                     var name = reader.ReadString();

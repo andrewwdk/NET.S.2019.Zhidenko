@@ -2,7 +2,7 @@
 
 namespace NET.S._2019.Zhidenko._8
 {
-    public class Book: IEquatable<Book>, IComparable, IComparable<Book>
+    public class Book : IEquatable<Book>, IComparable, IComparable<Book>
     {
         private string isbn;
         private string name;
@@ -32,7 +32,7 @@ namespace NET.S._2019.Zhidenko._8
 
             set
             {
-                if(value == null || value == string.Empty)
+                if (value == null || value == string.Empty)
                 {
                     throw new ArgumentException("Isbn can't be null or empty!");
                 }
@@ -164,13 +164,13 @@ namespace NET.S._2019.Zhidenko._8
         {
             var hashCode = 352033288;
 
-            hashCode = hashCode * -1521134295 + Isbn.GetHashCode();
-            hashCode = hashCode * -1521134295 + Name.GetHashCode();
-            hashCode = hashCode * -1521134295 + Author.GetHashCode();
-            hashCode = hashCode * -1521134295 + Publisher.GetHashCode();
-            hashCode = hashCode * -1521134295 + PublicationYear.GetHashCode();
-            hashCode = hashCode * -1521134295 + Price.GetHashCode();
-            hashCode = hashCode * -1521134295 + PageCount.GetHashCode();
+            hashCode = (hashCode * -1521134295) + Isbn.GetHashCode();
+            hashCode = (hashCode * -1521134295) + Name.GetHashCode();
+            hashCode = (hashCode * -1521134295) + Author.GetHashCode();
+            hashCode = (hashCode * -1521134295) + Publisher.GetHashCode();
+            hashCode = (hashCode * -1521134295) + PublicationYear.GetHashCode();
+            hashCode = (hashCode * -1521134295) + Price.GetHashCode();
+            hashCode = (hashCode * -1521134295) + PageCount.GetHashCode();
 
             return hashCode;
         }
@@ -180,7 +180,7 @@ namespace NET.S._2019.Zhidenko._8
         /// <returns>Comparison result.</returns>
         public override bool Equals(object obj)
         {
-            return Equals(obj as Book);
+            return this.Equals(obj as Book);
         }
 
         /// <summary> Compare Book with other book.</summary>
@@ -193,7 +193,7 @@ namespace NET.S._2019.Zhidenko._8
                 return false;
             }
 
-            if(Isbn == book.Isbn && Name == book.Name && Author == book.Author && Publisher == book.Publisher
+            if (Isbn == book.Isbn && Name == book.Name && Author == book.Author && Publisher == book.Publisher
                 && PublicationYear == book.PublicationYear && Price == book.Price && PageCount == book.PageCount)
             {
                 return true;
@@ -209,12 +209,12 @@ namespace NET.S._2019.Zhidenko._8
         /// <returns>Comparison result.</returns>
         public int CompareTo(Book book)
         {
-            if(book == null)
+            if (book == null)
             {
                 return 1;
             }
 
-            if(string.Compare(Name, book.Name) == 0 && string.Compare(Author, book.Author) == 0)
+            if (string.Compare(Name, book.Name) == 0 && string.Compare(Author, book.Author) == 0)
             {
                 return 0;
             }
