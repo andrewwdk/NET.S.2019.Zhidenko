@@ -8,9 +8,9 @@ namespace NET.S._2019.Zhidenko._3
 {
     public static class DoubleExtended
     {
-        const int maxOffset = 1023;
-        const int bitsForMantissa = 52;
-        const int bitsForExponent = 11;
+        private const int MaxOffset = 1023;
+        private const int BitsForMantissa = 52;
+        private const int BitsForExponent = 11;
 
         /// <summary>
         /// Present double number in IEEE754 format
@@ -19,18 +19,17 @@ namespace NET.S._2019.Zhidenko._3
         /// <returns> Bits of double number </returns>
         public static string GetBinaryString(this double number)
         {
-            //Double number consists of S(sign, 1 bit), E(exponent, 11 bits), M(mantissa, 52 bits)
+            // Double number consists of S(sign, 1 bit), E(exponent, 11 bits), M(mantissa, 52 bits)
             // (-1)^S * 1,M * 2^(E - 1023), 1023 = 2^(11 - 1) - 1
-
-            string S, E, M;
+            string s, e, m;
 
             if (number < 0 || double.IsNaN(number) || double.IsNegativeInfinity(number) || double.IsNegativeInfinity(1 / number))
             {
-                S = "1";
+                s = "1";
             }
             else
             {
-                S = "0";
+                s = "0";
             }
 
             number = Math.Abs(number);
@@ -47,13 +46,12 @@ namespace NET.S._2019.Zhidenko._3
             {
                 valueOfE = GetE(ref number);
             }
-
             
-            E = ((long)valueOfE).GetBinaryString(bitsForExponent);
+            e = ((long)valueOfE).GetBinaryString(BitsForExponent);
 
-            M = FractionDecimalToBinary(number - 1);
+            m = FractionDecimalToBinary(number - 1);
 
-            return S + E + M;
+            return s + e + m;
         }
 
         /// <summary>
@@ -89,7 +87,7 @@ namespace NET.S._2019.Zhidenko._3
                 }
             }
 
-            result = result + maxOffset;
+            result = result + MaxOffset;
 
             if (result < 0)
             {
@@ -118,13 +116,13 @@ namespace NET.S._2019.Zhidenko._3
                 fraction = 0.5;
             }
 
-            string result = "";
+            string result = string.Empty;
             int integerOverflow = 0;
-            int length = bitsForMantissa;
+            int length = BitsForMantissa;
 
             if (fraction == 0)
             {
-                fraction = Math.Pow(2, -bitsForMantissa);
+                fraction = Math.Pow(2, -BitsForMantissa);
             }
 
             for (int i = 0; i < length; i++)
@@ -137,6 +135,5 @@ namespace NET.S._2019.Zhidenko._3
 
             return result;
         }
-    
     }
 }
