@@ -9,38 +9,74 @@ namespace NET.S._2019.Zhidenko._1
     public class Sorts
     {
         /// <summary>
-        /// Sorts array by quick sort algorythm
+        /// Sorts array by quick sort algorithm
         /// </summary>
         /// <param name="array">Unsorted array</param>
         public static void QuickSort(int[] array)
         {
             if (array == null)
+            {
                 throw new ArgumentNullException();
+            }
 
             if (array.Length == 0)
+            {
                 throw new ArgumentException();
+            }
 
             QuickSortRecursion(array, 0, array.Length - 1);
         }
 
         /// <summary>
-        /// Recursion part of quick sort algorythm
+        /// Sorts array by merge sort algorithm
+        /// </summary>
+        /// <param name="array">Unsorted array</param>
+        public static int[] MergeSort(int[] array)
+        {
+            if (array == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            if (array.Length == 0)
+            {
+                throw new ArgumentException();
+            }
+
+            if (array.Length == 1)
+            {
+                return array;
+            }
+
+            int middle = array.Length / 2;
+            return MergeArrays(MergeSort(array.Take(middle).ToArray()), MergeSort(array.Skip(middle).ToArray()));
+        }
+
+        /// <summary>
+        /// Recursion part of quick sort algorithm
         /// </summary>
         /// <param name="array">Unsorted array</param>
         /// <param name="start">Index of first element of array</param>
         /// <param name="end">Index of last element of array</param>
         private static void QuickSortRecursion(int[] array, int start, int end)
         {
-            int middleElement = array[(end - start) / 2 + start];
+            int middleElement = array[((end - start) / 2) + start];
             int i = start;
             int j = end;
 
             while (i <= j)
             {
-                while (array[i] < middleElement && i <= end) //Finds next element to swap in left part
+                // Finds next element to swap in left part
+                while (array[i] < middleElement && i <= end) 
+                {
                     i++;
-                while (array[j] > middleElement && j >= start) //Finds next element to swap in right part 
+                }
+
+                // Finds next element to swap in right part 
+                while (array[j] > middleElement && j >= start) 
+                {
                     j--;
+                }
 
                 if (i <= j)
                 {
@@ -49,10 +85,17 @@ namespace NET.S._2019.Zhidenko._1
                     j--;
                 }
 
-                if (j > start) // if there aremore than one element in left part 
+                // if there aremore than one element in left part 
+                if (j > start) 
+                {
                     QuickSortRecursion(array, start, j);
-                if (i < end) // if there aremore than one element in right part
+                }
+
+                // if there aremore than one element in right part
+                if (i < end) 
+                {
                     QuickSortRecursion(array, i, end);
+                }
             }
         }
 
@@ -70,25 +113,6 @@ namespace NET.S._2019.Zhidenko._1
         }
 
         /// <summary>
-        /// Sorts array by merge sort algorythm
-        /// </summary>
-        /// <param name="array">Unsorted array</param>
-        public static int[] MergeSort(int[] array)
-        {
-            if (array == null)
-                throw new ArgumentNullException();
-
-            if (array.Length == 0)
-                throw new ArgumentException();
-
-            if (array.Length == 1)
-                return array;
-
-            int middle = array.Length / 2;
-            return MergeArrays(MergeSort(array.Take(middle).ToArray()), MergeSort(array.Skip(middle).ToArray()));
-        }
-
-        /// <summary>
         /// Merge two arrays in descending order
         /// </summary>
         /// <param name="firstArray">The first array</param>
@@ -101,10 +125,10 @@ namespace NET.S._2019.Zhidenko._1
 
             for (int i = 0; i < mergedArray.Length; i++)
             {
-                //if not the end of the first and second array
+                // If not the end of the first and second array
                 if (firstArrayElem < firstArray.Length && secondArrayElem < secondArray.Length)
                 {
-                    //add element from the first array or second depending on which element is smaller
+                    // Add element from the first array or second depending on which element is smaller
                     if (firstArray[firstArrayElem] > secondArray[secondArrayElem])
                     {
                         mergedArray[i] = secondArray[secondArrayElem];
@@ -118,7 +142,7 @@ namespace NET.S._2019.Zhidenko._1
                 }
                 else
                 {
-                    //add last element from the first or second array
+                    // Add last element from the first or second array
                     if (secondArrayElem < secondArray.Length)
                     {
                         mergedArray[i] = secondArray[secondArrayElem];
