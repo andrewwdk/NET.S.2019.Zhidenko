@@ -8,13 +8,13 @@ namespace Books.Formats
 {
     public class PublicationYearDecorator : BookDecorator
     {
-        public PublicationYearDecorator(IFormattedBook book) : base(book)
+        public PublicationYearDecorator(Book book) : base(book)
         {
         }
 
-        public override string ToFormattedString()
+        public override string ToString()
         {
-            return Book.ToFormattedString() + "Year of publication - " + (Book as Book).PublicationYear;
+            return Book.ToString() + " Year of publication - " + Book.PublicationYear;
         }
     }
 }

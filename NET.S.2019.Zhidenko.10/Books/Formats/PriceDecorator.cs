@@ -8,13 +8,13 @@ namespace Books.Formats
 {
     public class PriceDecorator : BookDecorator
     {
-        public PriceDecorator(IFormattedBook book) : base(book)
+        public PriceDecorator(Book book) : base(book)
         {
         }
 
-        public override string ToFormattedString()
+        public override string ToString()
         {
-            return Book.ToFormattedString() + "Price - " + (Book as Book).Price;
+            return Book.ToString() + " Price - " + Book.Price;
         }
     }
 }

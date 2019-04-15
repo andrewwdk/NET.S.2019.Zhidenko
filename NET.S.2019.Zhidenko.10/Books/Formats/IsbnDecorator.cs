@@ -8,13 +8,13 @@ namespace Books.Formats
 {
     public class IsbnDecorator : BookDecorator
     {
-        public IsbnDecorator(IFormattedBook book) : base(book)
+        public IsbnDecorator(Book book) : base(book)
         {
         }
 
-        public override string ToFormattedString()
+        public override string ToString()
         {
-            return Book.ToFormattedString() + "Isbn - " + (Book as Book).Isbn;
+            return Book.ToString() + " Isbn - " + Book.Isbn;
         }
     }
 }

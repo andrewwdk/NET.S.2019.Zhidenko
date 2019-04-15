@@ -8,13 +8,13 @@ namespace Books.Formats
 {
     public class PageCountDecorator : BookDecorator
     {
-        public PageCountDecorator(IFormattedBook book) : base(book)
+        public PageCountDecorator(Book book) : base(book)
         {
         }
 
-        public override string ToFormattedString()
+        public override string ToString()
         {
-            return Book.ToFormattedString() + "Count of page - " + (Book as Book).PageCount;
+            return Book.ToString() + " Count of page - " + Book.PageCount;
         }
     }
 }

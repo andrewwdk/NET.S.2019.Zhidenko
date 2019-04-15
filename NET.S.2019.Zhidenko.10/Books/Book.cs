@@ -3,7 +3,7 @@ using Books.Formats;
 
 namespace Books
 {
-    public class Book : IEquatable<Book>, IComparable, IComparable<Book>, IFormattedBook
+    public class Book : IEquatable<Book>, IComparable, IComparable<Book>
     {
         private string isbn;
         private string name;
@@ -154,8 +154,15 @@ namespace Books
         /// <returns>String representation.</returns>
         public override string ToString()
         {
+            return "Book:";
+        }
+
+        /// <summary> Convert Book to string.</summary>
+        /// <returns>String representation.</returns>
+        public string ToFullString()
+        {
             return "Isbn: " + Isbn + ", Name: " + Name + ", Author: " + Author + ", Publisher: " +
-                Publisher + ", Year of publication: " + PublicationYear.ToString() + ", Count of page: " + 
+                Publisher + ", Year of publication: " + PublicationYear.ToString() + ", Count of page: " +
                 PageCount.ToString() + ", Price: " + Price.ToString();
         }
 
@@ -231,13 +238,6 @@ namespace Books
         public int CompareTo(object obj)
         {
             return CompareTo(obj as Book);
-        }
-
-        /// <summary> Shows book as formatted string.</summary>
-        /// <returns>Formatted string.</returns>
-        public string ToFormattedString()
-        {
-            return "Book: ";
         }
     }
 }

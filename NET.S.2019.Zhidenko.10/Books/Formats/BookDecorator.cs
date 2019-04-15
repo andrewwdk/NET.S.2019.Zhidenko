@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Books.Formats
 {
-    public abstract class BookDecorator : IFormattedBook
+    public abstract class BookDecorator : Book
     {
-        protected BookDecorator(IFormattedBook book)
+        protected BookDecorator(Book book) : 
+            base(book.Isbn, book.Name, book.Author, book.Publisher, book.PublicationYear, book.PageCount, book.Price)
         {
             Book = book;
         }
 
-        public IFormattedBook Book { get; private set; }
+        public Book Book { get; private set; }
 
-        public abstract string ToFormattedString();
+        public abstract override string ToString();
     }
 }
