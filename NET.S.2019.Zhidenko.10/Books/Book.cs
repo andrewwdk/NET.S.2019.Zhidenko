@@ -1,10 +1,13 @@
 ﻿using System;
-using Books.Formats;
+using System.Globalization;
+using System.Text;
 
 namespace Books
 {
-    public class Book : IEquatable<Book>, IComparable, IComparable<Book>
+    public class Book : IEquatable<Book>, IComparable, IComparable<Book>, IFormattable
     {
+        private const string DefaultFormatString = "AN";
+
         private string isbn;
         private string name;
         private string author;
@@ -164,6 +167,58 @@ namespace Books
             return "Isbn: " + Isbn + ", Name: " + Name + ", Author: " + Author + ", Publisher: " +
                 Publisher + ", Year of publication: " + PublicationYear.ToString() + ", Count of page: " +
                 PageCount.ToString() + ", Price: " + Price.ToString();
+        }
+
+        /// <summary> Convert Book to string by certain format.</summary>
+        /// <param name="format"> Format. </param>
+        /// <param name="formatProvider"> Defines the symbols used in converting an object to its string representation. </param>
+        /// <returns>String representation.</returns>
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            if (string.IsNullOrEmpty(format))
+            {
+                format = DefaultFormatString;
+            }
+
+            if (formatProvider == null)
+            {
+                formatProvider = CultureInfo.CurrentCulture;
+            }
+
+            StringBuilder formattedString = new StringBuilder();
+            formattedString.Append("Book:");
+
+            foreach(char c in format)
+            {
+                switch (c)
+                {
+                    case 'I':
+                        formattedString.Append(" Isbn - " + Isbn.ToString(formatProvider));
+                        break;
+                    case 'A':
+                        formattedString.Append(" Author - " + Author.ToString(formatProvider));
+                        break;
+                    case 'N':
+                        formattedString.AppendFormat(" Name - " + Name.ToString(formatProvider));
+                        break;
+                    case 'P':
+                        formattedString.Append(" Publisher - " + Publisher.ToString(formatProvider));
+                        break;
+                    case 'Y':
+                        formattedString.Append(" Year of publication - " + PublicationYear.ToString(formatProvider));
+                        break;
+                    case 'C':
+                        formattedString.AppendFormat(" Count of page - " + PageCount.ToString(formatProvider));
+                        break;
+                    case 'p':
+                        formattedString.Append(" Price - " + Price.ToString(formatProvider));
+                        break;
+                    default:
+                        throw new FormatException(string.Format("Format string is not supported."));
+                }
+            }
+
+            return formattedString.ToString();
         }
 
         /// <summary> Calculate hash code.</summary>
