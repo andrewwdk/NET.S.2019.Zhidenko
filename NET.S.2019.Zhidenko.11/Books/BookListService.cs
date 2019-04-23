@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NLog;
 
 namespace Books
 {
     public class BookListService
     {
         private IStoragable storage;
+        Logger logger;
 
         public BookListService(IStoragable storage)
         {
+            logger = LogManager.GetCurrentClassLogger();
             Storage = storage;
             BookList = storage.GetBooksFromStorage();
         }
@@ -27,7 +28,15 @@ namespace Books
 
             set
             {
-                storage = value ?? throw new ArgumentNullException("Storage can't be null!");
+                if(value != null)
+                {
+                    storage = value;
+                }
+                else
+                {
+                    logger.Error("Storage is null.");
+                    throw new ArgumentNullException("Storage can't be null!");
+                }
             }
         }
 
@@ -37,10 +46,12 @@ namespace Books
         {
             if (IfBookExists(book))
             {
+                logger.Error("The book already exists!");
                 throw new ArgumentException("The book already exists!");
             }
 
             BookList.Add(book);
+            logger.Info("Book was added successfully");
         }
 
         /// <summary> Remove book from the list.</summary>
@@ -49,16 +60,27 @@ namespace Books
         {
             if (!IfBookExists(book))
             {
+                logger.Error("The book doesn't exist!");
                 throw new ArgumentException("The book doesn't exist!");
             }
 
             BookList.Remove(book);
+            logger.Info("Book was removed successfully");
         }
 
         /// <summary> Save list of books in storage.</summary>
         public void PutBooksIntoStorage()
         {
-            storage.PutBooksIntoStorage(BookList);
+            try
+            {
+                storage.PutBooksIntoStorage(BookList);
+            }
+            catch (Exception e)
+            {
+                logger.Error("Books were not saved into storage. {0}", e.Message);
+            }
+
+            logger.Info("Books were saved into storage successfully");
         }
 
         /// <summary> Sorts list of book by chosen tag.</summary>
@@ -68,9 +90,11 @@ namespace Books
         {
             if (tag == null)
             {
+                logger.Error("Sort tag can't be null!");
                 throw new ArgumentNullException("Tag can't be null!");
             }
 
+            logger.Debug("Sorting by tag");
             return tag.SortBooksByTag(BookList).ToList();
         }
 
@@ -81,9 +105,11 @@ namespace Books
         {
             if (tag == null)
             {
+                logger.Error("Search tag can't be null!");
                 throw new ArgumentNullException("Tag can't be null!");
             }
 
+            logger.Debug("Searching for books by tag");
             return tag.FindBooksByTag(BookList);
         }
 
@@ -92,6 +118,8 @@ namespace Books
         /// <returns> Existence check result.</returns>
         private bool IfBookExists(Book book)
         {
+            logger.Debug("Checking existance of the book");
+
             if (book == null)
             {
                 return false;
@@ -101,10 +129,12 @@ namespace Books
             {
                 if (currentBook.Equals(book))
                 {
+                    logger.Debug("The book was found");
                     return true;
                 }
             }
 
+            logger.Debug("The book wasn't found");
             return false;
         }
     }
